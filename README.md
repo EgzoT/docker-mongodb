@@ -1,4 +1,4 @@
-# docker-mongodb-x86-64
+# docker-mongodb
 
 Docker image to run mongodb
 
