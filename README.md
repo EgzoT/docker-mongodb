@@ -1,6 +1,8 @@
 # docker-mongodb
 
-Docker image to run mongodb
+Docker image to run mongodb 4.4
+
+> Support RPi 3/4 64-bit
 
 ## Build
 
@@ -11,7 +13,7 @@ sudo docker build -t test-mongo:1 .
 ## Run
 
 ```sh
-sudo docker run --restart always --name test-debian -d test-debian:1
+sudo docker run --restart always --name test-mongo -d test-mongo:1
 ```
 
 ## Run prepared to expose the mongodb to work outside the container
