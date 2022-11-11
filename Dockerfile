@@ -16,5 +16,9 @@ RUN mkdir data
 WORKDIR "/data"
 RUN mkdir db
 
-EXPOSE 27017
-CMD ["mongod"]
+WORKDIR "/"
+
+COPY ./script.sh .
+RUN chmod +x /script.sh
+
+CMD /script.sh

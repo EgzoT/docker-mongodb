@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  mongodb:
+    build: .
+    restart: always
+    expose:
+      - "27017"
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./conf:/etc/mongo
