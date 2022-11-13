@@ -32,4 +32,4 @@ cd ..
 
 # Run mongodb
 
-mongod
+mongod --config /etc/mongo/mongod.conf

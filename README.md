@@ -7,19 +7,19 @@ Docker image to run mongodb 4.4
 ## Build
 
 ```sh
-sudo docker build -t test-mongo:1 .
+sudo docker build -t test-mongo .
 ```
 
 ## Run
 
 ```sh
-sudo docker run --restart always --name test-mongo -d test-mongo:1
+sudo docker run --restart always --name test-mongo -d test-mongo
 ```
 
 ## Run prepared to expose the mongodb to work outside the container
 
 ```sh
-sudo docker run -p 27017:27017 --restart always --name test-mongo -v /home/MONGOD_CONF_PATH:/etc/mongo -d test-mongo:1 mongod --config /etc/mongo/mongod.conf
+sudo docker run -p 27017:27017 --restart always --name test-mongo -v /home/MONGOD_CONF_PATH:/etc/mongo -d test-mongo
 ```
 
 > MONGOD_CONF_PATH - path to mongod.conf file
@@ -100,6 +100,8 @@ db.test.update({"name":"test"},{$set:{'mongo':"yes"}})
 ```
 
 # Use compose
+
+> Compose is prepared to expose the database outside container
 
 ## Add **.env** file in main folder
 
